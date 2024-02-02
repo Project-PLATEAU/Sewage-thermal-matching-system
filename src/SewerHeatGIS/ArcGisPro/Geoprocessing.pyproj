@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{6d0ab4e6-08b2-4836-99d6-42136c47db45}</ProjectGuid>
+    <ProjectHome />
+    <StartupFile>CalculateHeatDemand.py</StartupFile>
+    <SearchPath />
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <ProjectTypeGuids>{888888a0-9f3d-457c-b088-3a5042f75d52}</ProjectTypeGuids>
+    <LaunchProvider>Standard Python launcher</LaunchProvider>
+    <InterpreterId>MSBuild|arcgispro-py3|$(MSBuildProjectFullPath)</InterpreterId>
+    <Name>Geoprocessing</Name>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug'" />
+  <PropertyGroup Condition="'$(Configuration)' == 'Release'" />
+  <PropertyGroup>
+    <VisualStudioVersion Condition=" '$(VisualStudioVersion)' == '' ">10.0</VisualStudioVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Scripts\CalculateHeatDemand.py" />
+    <Compile Include="Scripts\CalculatePotential.py" />
+    <Compile Include="Scripts\CalculateTeikaYuka.py" />
+    <Compile Include="Scripts\CheckKeyField.py" />
+    <Compile Include="Scripts\ClearSelectionByLayerKeyName.py" />
+    <Compile Include="Scripts\NearBuildingToDrainPipe.py" />
+    <Compile Include="Scripts\NearBuildingToInlet.py" />
+    <Compile Include="Scripts\PublishFGDB.py" />
+    <Compile Include="Scripts\ReadSettingIniFile.py" />
+    <Compile Include="Scripts\Utils.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Interpreter Include="c:\Program Files\ArcGIS\Pro\bin\Python\envs\arcgispro-py3\">
+      <Id>arcgispro-py3</Id>
+      <Version>3.9</Version>
+      <Description>arcgispro-py3</Description>
+      <InterpreterPath>python.exe</InterpreterPath>
+      <WindowsInterpreterPath>pythonw.exe</WindowsInterpreterPath>
+      <PathEnvironmentVariable>PYTHONPATH</PathEnvironmentVariable>
+      <Architecture>X64</Architecture>
+    </Interpreter>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Scripts\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
+</Project>
