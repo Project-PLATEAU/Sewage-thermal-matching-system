@@ -1,0 +1,55 @@
+﻿<ArcGIS defaultAssembly="SewerHeatGIS_ProAppModule.dll" defaultNamespace="SewerHeatGIS_ProAppModule" xmlns="http://schemas.esri.com/DADF/Registry" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://schemas.esri.com/DADF/Registry file:///C:/Program%20Files/ArcGIS/Pro/bin/ArcGIS.Desktop.Framework.xsd">
+  <AddInInfo id="{8559b9bf-3a32-43b0-a7c3-33270f339a32}" version="1.0" desktopVersion="3.1.41833">
+    <Name>SewerHeatGIS_ProAppModule</Name>
+    <Description>SewerHeatGIS_ProAppModule</Description>
+    <Image>Images\AddinDesktop32.png</Image>
+    <Author>PASCO Corp</Author>
+    <Company>PASCO Corp</Company>
+    <Date>2023/3/31</Date>
+    <Subject>Framework</Subject>
+    <!-- Note subject can be one or more of these topics:
+                    Content, Framework, Editing, Geodatabase, Geometry, Geoprocessing, Layouts, Map Authoring, Map Exploration -->
+  </AddInInfo>
+  <modules>
+    <insertModule id="SewerHeatGIS_AddinSystem_Module" className="SewerHeatGIS_Module" autoLoad="false" caption="SewerHeatGIS_Module">
+      <tabs>
+        <tab id="SewerHeatGIS_Tab1" caption="下水熱ツール">
+          <group refID="SewerHeatGIS_ProAppModule_Group1"/>
+          <group refID="SewerHeatGIS_ProAppModule_Group2"/>
+          <group refID="SewerHeatGIS_ProAppModule_Group3"/>
+        </tab>
+      </tabs>‍‍‍‍‍
+      <groups>
+        <group id="SewerHeatGIS_ProAppModule_Group1" caption="" appearsOnAddInTab="false">
+          <button refID="SewerHeatGIS_HeatDemandCalculation_Window" size="large" />
+        </group>
+        <group id="SewerHeatGIS_ProAppModule_Group2" caption="" appearsOnAddInTab="false">
+          <button refID="SewerHeatGIS_TotalFloorAreaTotal_Window" size="large" />
+        </group>
+        <group id="SewerHeatGIS_ProAppModule_Group3" caption="" appearsOnAddInTab="false">
+          <button refID="SewerHeatGIS_ThermalPotentialCalculation_Window" size="large" />
+        </group>
+      </groups>
+      <controls>
+        <button id="SewerHeatGIS_HeatDemandCalculation_Window" caption="設定ツール" className="ShowHeatDemandCalculationProWindow" loadOnClick="true"
+            largeImage="Images\configure-24.png">
+          <tooltip heading="設定ツール">
+            <disabledText />
+          </tooltip>
+        </button>
+        <button id="SewerHeatGIS_TotalFloorAreaTotal_Window" caption="延床面積集計" className="ShowTotalFloorAreaTotalProWindow" loadOnClick="true"
+            largeImage="Images\mask-inside-24.png">
+          <tooltip heading="延床面積集計">
+            <disabledText />
+          </tooltip>
+        </button>
+        <button id="SewerHeatGIS_ThermalPotentialCalculation_Window" caption="ポテンシャル計算" className="ShowThermalPotentialCalculationProWindow" loadOnClick="true"
+            largeImage="Images\utility-network-trace-24.png">
+          <tooltip heading="ポテンシャル計算">
+            <disabledText />
+          </tooltip>
+        </button>
+      </controls>
+    </insertModule>
+  </modules>
+</ArcGIS>
