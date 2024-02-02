@@ -1,0 +1,184 @@
+html {
+    font-size: 14px;
+    margin: 0;
+    position: relative;
+    min-height: 100%;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+#mapContent {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+}
+
+#loading {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-color: rgb(0, 0, 0, 0.1);
+    z-index: 9999;
+}
+
+.viewDiv {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+}
+
+.infoDiv {
+    width: 310px;
+    margin: 5px;
+    position: absolute;
+    top: 15px;
+    right: 10px;
+    height: calc(100% - 45px);
+}
+
+#sceneInfoDiv {
+    height: 123px;
+}
+
+.widget-scroll {
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.infoDiv .info-list-group {
+    border: 2px solid #00000080;
+    border-radius: 12px;
+    margin-top: 3px;
+}
+
+
+.infoDiv .info-img {
+    width: 288px;
+    padding: 2px;
+}
+
+.minInput {
+    width: 52px;
+    padding: 0px;
+    height: 17px;
+    margin: 0 2px;
+    margin-top: -4px;
+}
+
+.item-selected {
+    border-inline-start: 4px solid var(--calcite-ui-brand);
+    margin-left: -4px;
+}
+
+calcite-shell-panel {
+    --calcite-shell-panel-max-width: 310px;
+    --calcite-shell-panel-min-width: 310px;
+}
+
+.esri-button--danger {
+    background-color: rgba(0,0,0,0);
+    border: 1px solid rgb(216, 48, 32) !important;
+    color: rgb(216, 48, 32);
+    width: 246px;
+}
+
+.esri-button--danger:hover {
+    background-color: rgb(216, 48, 32);
+    color: #fff;
+}
+
+calcite-alert {
+    --calcite-alert-width: 400px;
+}
+
+#editHeatDemandModal {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    background: rgba(0,0,0,.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    z-index: 1001;
+    opacity: 1;
+    box-sizing: border-box;
+}
+
+#editHeatDemandModal .customModalDialog {
+    position: relative;
+    top: auto;
+    left: auto;
+    right: auto;
+    bottom: auto;
+    border: none;
+    background: #fff;
+    overflow: auto;
+    border-radius: 0px;
+    outline: none;
+    padding: 18px 22px;
+    max-width: 40vw;
+    max-height: 80vh;
+    width: 400px;
+    box-sizing: border-box;
+    z-index: 102;
+    text-align: left;
+    display: inline-block;
+    vertical-align: middle;
+    margin-top: 0px;
+}
+
+#editHeatDemandModal #customCloseButton {
+    color: #6e6e6e;
+    position: absolute;
+    top: 12px;
+    right: 7px;
+    z-index: 1;
+    background: none;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+}
+
+#editHeatDemandModal .customTitle {
+    font-size: 20px;
+    margin: 0 0 12px 0;
+    padding: 0;
+}
+
+#editHeatDemandModal .customInput {
+    width: 100px;
+}
+
+#editHeatDemandModal .customFooter {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 25px;
+}
+
+#switchDiv {
+    position: absolute;
+    top: 15px;
+    left: 60px;
+}
+
+#switchDiv #switchBtn {
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 1px 2px;
+}
