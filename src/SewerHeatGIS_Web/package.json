@@ -1,0 +1,17 @@
+{
+  "name": "SewerHeatGIS_Web",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "scripts": {
+    "build": "..\\node\\node .\\esbuild.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "esbuild": "0.17.17"
+  },
+  "devDependencies": {
+    "eslint": "^8.45.0"
+  }
+}
