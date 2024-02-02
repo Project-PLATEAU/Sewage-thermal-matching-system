@@ -1,0 +1,37 @@
+﻿@using Microsoft.Extensions.Configuration
+@inject IConfiguration Configuration
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"]</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://js.arcgis.com/calcite-components/1.4.3/calcite.css" />    
+    <link rel="stylesheet" href="https://js.arcgis.com/4.26/esri/themes/light/main.css">
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <script type="module" src="https://js.arcgis.com/calcite-components/1.4.3/calcite.esm.js"></script>
+    <script src="https://js.arcgis.com/4.26/"></script>
+
+</head>
+<body>
+
+    @RenderBody()
+
+    <script>
+        const appRoot = "@Url.Content("~/")";
+        const appId = "@Configuration.GetSection("App")["appId"]";
+    </script>
+
+    <environment include="Development">
+        <script type="module" src="~/js/map.js" asp-append-version="true"></script>
+    </environment>
+
+    <environment exclude="Development">
+        <script type="module" src="~/js_out/map.js" asp-append-version="true"></script>
+    </environment>
+    
+
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

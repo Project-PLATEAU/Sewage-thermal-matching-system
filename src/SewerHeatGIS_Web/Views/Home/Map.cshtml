@@ -1,0 +1,293 @@
+﻿@{
+    ViewData["Title"] = "需要家マッチング・出力・シミュレーション";
+}
+<div id="mapContent" class="d-none">
+    <div id="mapDiv">
+        <div id="mapViewDiv" class="viewDiv"></div>
+        <div id="mapInfoDiv" class="infoDiv esri-widget">
+            <calcite-shell>
+                <calcite-shell-panel slot="panel-start" width-scale="m">
+                    <calcite-panel heading="下水熱ツール">
+                        <calcite-action icon="sign-out" text="ログアウト" slot="header-actions-end" id="control-signout"></calcite-action>
+                        <calcite-tooltip reference-element="control-signout">
+                            <span>システムからログアウトします。</span>
+                        </calcite-tooltip>
+                        <calcite-list>
+                            <div class="info-list-group">
+                                <p class="h6 ps-3 pb-0 pt-2 mb-2">処理の流れ</p>
+                                <img src="@Url.Content("~/info.png")" alt="処理の流れ" class="info-img" />
+                            </div>
+
+                            <div class="info-list-group">
+                                <p class="h6 ps-3 pb-0 pt-2 mb-1">システム設定</p>
+                                <calcite-label>
+                                    <span class="esri-editor__panel-content__section pb-0">地区絞込み(処理区)</span>
+                                    <calcite-list-item open class="esri-editor__panel-content__section pt-0 pb-0">
+                                        <calcite-select id="chikuSelect" class="canDisabled">
+                                        </calcite-select>
+                                        <calcite-tooltip reference-element="chikuSelect">
+                                            <span>各種図形を表示する対象の処理区を選択してください。事前に表示したい箇所が何処理区なのかを市のHPなどで事前に確認しておいてください。</span>
+                                        </calcite-tooltip>
+                                    </calcite-list-item>
+                                </calcite-label>
+
+                                <calcite-label>
+                                    <span class="esri-editor__panel-content__section pb-0">検索対象選択</span>
+                                    <calcite-list-item class="esri-editor__panel-content__section pt-0 pb-0">
+                                        <calcite-select id="heatTypeSelect" class="canDisabled">
+                                            <calcite-option value="3" selected="">空調</calcite-option>
+                                            <calcite-option value="4">給湯</calcite-option>
+                                        </calcite-select>
+                                        <calcite-tooltip reference-element="heatTypeSelect">
+                                            <span>下水熱を利用する対象を「空調」「給湯」より選択してください。ここで選択した項目について、下水熱の利用可能性が確認できます。</span>
+                                        </calcite-tooltip>
+                                    </calcite-list-item>
+                                </calcite-label>
+                            </div>
+
+                            <div class="info-list-group">
+                                <p class="h6 ps-3 pb-0 pt-2 mb-1">熱需給のマッチング</p>
+                                <calcite-label>
+                                    <div class="d-flex esri-editor__panel-content__section pb-0">
+                                        家屋(1件)→管渠選択
+                                        <label class="ms-3">距離</label>
+                                        <input id="kaokuBufferSize" class="minInput canDisabled" value="150" type="number" min="0" max="150">
+                                        <calcite-tooltip reference-element="kaokuBufferSize">
+                                            <span>家屋から指定した距離内にある下水道管が検索されます。最大値は150mです。</span>
+                                        </calcite-tooltip>
+                                        <label>m</label>
+                                    </div>
+                                    <calcite-list-item class="esri-editor__panel-content__section pt-0 pb-0">
+                                        <calcite-action id="matchingByKaokuAction" text="対象家屋選択" text-enabled class="canDisabled" setFocus="console.log('aaaa')">
+                                            <calcite-icon icon="cursor" scale="l"></calcite-icon>
+                                        </calcite-action>
+                                        <calcite-tooltip reference-element="matchingByKaokuAction">
+                                            <span>このボタンを押して画面上で家屋を選択することで、選択した家屋の熱需要値を上回る熱ポテンシャルを持つ下水道管が強調表示されます。</span>
+                                        </calcite-tooltip>
+                                    </calcite-list-item>
+                                </calcite-label>
+
+                                <calcite-label>
+                                    <span class="esri-editor__panel-content__section pb-0">管渠(複数可)→家屋選択</span>
+                                    <calcite-list-item class="esri-editor__panel-content__section pt-0 pb-0">
+                                        <calcite-action id="matchingByDrainPipesAction" text="対象管渠選択" text-enabled class="canDisabled">
+                                            <calcite-icon icon="cursor" scale="l"></calcite-icon>
+                                        </calcite-action>
+                                        <calcite-tooltip reference-element="matchingByDrainPipesAction">
+                                            <span>このボタンを押して画面上で下水道管（複数可）を選択することで、選択した下水道管の熱ポテンシャル値より小さな熱需要値を持つ家屋が強調表示されます。</span>
+                                        </calcite-tooltip>
+                                    </calcite-list-item>
+                                </calcite-label>
+
+                                <calcite-label>
+                                    <div class="d-flex esri-editor__panel-content__section pb-0">
+                                        人孔(1件)→家屋選択<br />
+                                        >>管渠(複数)絞込検索
+                                        <label class="ms-3 mt-2">距離</label>
+                                        <input id="manholeBufferSize" class="minInput canDisabled mt-1" value="150" type="number" min="0" max="150">
+                                        <calcite-tooltip reference-element="manholeBufferSize">
+                                            <span>マンホールから指定した距離内にある家屋が検索されます。最大値は150mです。</span>
+                                        </calcite-tooltip>
+                                        <label class="mt-2">m</label>
+                                    </div>
+                                    <calcite-list-item class="esri-editor__panel-content__section pt-0 pb-0">
+                                        <calcite-action id="matchingByManholeAndDrainPipesAction" text="対象人孔選択" text-enabled class="canDisabled">
+                                            <calcite-icon icon="cursor" scale="l"></calcite-icon>
+                                        </calcite-action>
+                                        <calcite-tooltip reference-element="matchingByManholeAndDrainPipesAction">
+                                            <span>このボタンを押して画面上でマンホールを選択（１件）し、続けて下水道管を選択（複数可）することで、選択したマンホールから指定した距離内にあり、かつ選択した下水道管から下水熱を利用可能な家屋が強調表示されます。</span>
+                                        </calcite-tooltip>
+                                    </calcite-list-item>
+                                </calcite-label>
+                            </div>
+
+                            <div class="info-list-group">
+                                <p class="h6 ps-3 pb-0 pt-2 mb-1">熱需要値と排水先下水道管の変更</p>
+                                <calcite-label>
+                                    <span class="esri-editor__panel-content__section pb-0">熱需要値変更</span>
+                                    <calcite-list-item class="esri-editor__panel-content__section pt-0 pb-0">
+                                        <calcite-action id="editHeatDemandAction" text="家屋選択" text-enabled class="canDisabled">
+                                            <calcite-icon icon="cursor" scale="l"></calcite-icon>
+                                        </calcite-action>
+                                        <calcite-tooltip reference-element="editHeatDemandAction">
+                                            <span>電気、ガス、灯油など使用したエネルギーの種類及び使用量がわかる場合に、画面上で家屋を選択し、各種エネルギーの使用量を入力することで対象家屋の熱需要値を変更できます。</span>
+                                        </calcite-tooltip>
+                                    </calcite-list-item>
+                                </calcite-label>
+
+                                <calcite-label>
+                                    <span class="esri-editor__panel-content__section pb-0">関連管渠変更</span>
+                                    <calcite-list-item class="esri-editor__panel-content__section pt-0 pb-0">
+                                        <calcite-action id="editKankyoKeyAction" text="家屋選択" text-enabled class="canDisabled">
+                                            <calcite-icon icon="cursor" scale="l"></calcite-icon>
+                                        </calcite-action>
+                                        <calcite-tooltip reference-element="editKankyoKeyAction">
+                                            <span>家屋と関連付いている下水道管を変更できます。画面上で家屋を選択し、続いて下水道管を選択することで、排水先の下水道管を変更できます。</span>
+                                        </calcite-tooltip>
+                                    </calcite-list-item>
+                                </calcite-label>
+                            </div>
+
+                            <div class="info-list-group">
+                                <p class="h6 ps-3 pb-0 pt-2 mb-2">検討ツール・調書作成</p>
+                                <calcite-label id="reportModeLabel">
+                                    <calcite-list-item class="esri-editor__panel-content__section pt-1 pb-0">
+                                        <calcite-action id="startReportModeAction" text="家屋→管渠選択" text-enabled>
+                                            <calcite-icon icon="cursor" scale="l"></calcite-icon>
+                                        </calcite-action>
+                                        <calcite-tooltip reference-element="startReportModeAction">
+                                            <span>検討ツール・調書を作成します。画面上で検討対象の家屋を選択し、下水熱を採熱予定の下水道管を選択してください。</span>
+                                        </calcite-tooltip>
+                                    </calcite-list-item>
+                                    <calcite-list-item class="esri-editor__panel-content__section pt-1 pb-0">
+                                        <calcite-action id="create3DPumpAction" text="ヒートポンプ配置" text-enabled class="canDisabled">
+                                            <calcite-icon icon="cube" scale="l"></calcite-icon>
+                                        </calcite-action>
+                                        <calcite-tooltip reference-element="create3DPumpAction">
+                                            <span>ヒートポンプ設置場所を検討できます。画面左上のツールボタンで３D画面移動及び回転が可能です。ヒートポンプを設置する場所を決定後、「配置決定」ボタンを押してください。</span>
+                                        </calcite-tooltip>
+                                    </calcite-list-item>
+                                    <calcite-list-item class="esri-editor__panel-content__section pt-1 pb-0">
+                                        <calcite-action id="createPipeLineAction" text="採熱経路作成" text-enabled class="canDisabled">
+                                            <calcite-icon icon="line" scale="l"></calcite-icon>
+                                        </calcite-action>
+                                        <calcite-tooltip reference-element="createPipeLineAction">
+                                            <span>ヒートポンプからマンホールへの採熱経路距離を設定してください。画面上をクリックして採熱経路のラインを入力し、ダブルクリックでライン作成を完了します。再入力する場合は、このボタンを押してください。</span>
+                                        </calcite-tooltip>
+                                    </calcite-list-item>
+                                    <calcite-list-item class="esri-editor__panel-content__section pt-1 pb-0">
+                                        <calcite-action id="downloadExcelAction" text="検討ツール作成" text-enabled class="canDisabled">
+                                            <calcite-icon icon="chart-gear" scale="l"></calcite-icon>
+                                        </calcite-action>
+                                        <calcite-tooltip reference-element="downloadExcelAction">
+                                            <span>下水熱利用可能性簡易検討ツールを作成し、エクセルをZip形式でダウンロードできます。解凍後、マクロが動作しない場合は、マイクロソフト純正以外の解凍ソフトで解凍してください。</span>
+                                        </calcite-tooltip>
+                                    </calcite-list-item>
+                                    <calcite-list-item class="esri-editor__panel-content__section pt-1 pb-0">
+                                        <calcite-action id="downloadPdfAction" text="調書作成" text-enabled class="canDisabled">
+                                            <calcite-icon icon="configure" scale="l"></calcite-icon>
+                                        </calcite-action>
+                                        <calcite-tooltip reference-element="downloadPdfAction">
+                                            <span>下水熱の利用を検討した家屋及び下水道管の属性などを記載した調書を作成できます。調書はPDF形式でダウンロードされます。</span>
+                                        </calcite-tooltip>
+                                    </calcite-list-item>
+                                    <calcite-list-item class="esri-editor__panel-content__section pt-1 pb-0">
+                                        <calcite-action id="endReportModeAction" appearance="" text="初期化" text-enabled class="canDisabled">
+                                            <calcite-icon icon="trash" scale="l"></calcite-icon>
+                                        </calcite-action>
+                                        <calcite-tooltip reference-element="endReportModeAction">
+                                            <span>検討内容の初期化を行います。</span>
+                                        </calcite-tooltip>
+                                    </calcite-list-item>
+                                </calcite-label>
+                            </div>
+
+                        </calcite-list>
+                    </calcite-panel>
+                </calcite-shell-panel>
+            </calcite-shell>
+        </div>
+
+        <div id="editHeatDemandModal" class="d-none">
+            <div class="customModalDialog" role="dialog" aria-labelledby="editHeatDemandTitle" aria-describedby="editHeatDemandContent">
+                <button id="customCloseButton" aria-label="閉じる" title="閉じる" type="button">
+                    <span aria-hidden="true" class="esri-icon-close"></span>
+                </button>
+                <h1 id="editHeatDemandTitle" class="customTitle">
+                    熱需要換算
+                </h1>
+                <div class="mt-1" id="editHeatDemandContent">
+                    <div class="row mb-3">
+                        <div id="editHeatDemandMessage" class="col-12 ps-4 text-danger"></div>
+                    </div>
+                    <div class="row mb-2">
+                        <div class="col-6 ps-4">電気</div>
+                        <div class="col-6">
+                            <input id="denki" class="customInput" value="0" type="number" min="0">
+                            kWh/年
+                        </div>
+                    </div>
+                    <div class="row mb-2">
+                        <div class="col-6 ps-4">都市ガス（13A）</div>
+                        <div class="col-6">
+                            <input id="toshiGass" class="customInput" value="0" type="number" min="0">
+                            m3/年
+                        </div>
+                    </div>
+                    <div class="row mb-2">
+                        <div class="col-6 ps-4">灯油</div>
+                        <div class="col-6">
+                            <input id="touyu" class="customInput" value="0" type="number" min="0">
+                            L/年
+                        </div>
+                    </div>
+                    <div class="row mb-2">
+                        <div class="col-6 ps-4">重油</div>
+                        <div class="col-6">
+                            <input id="zyuuyu" class="customInput" value="0" type="number" min="0">
+                            L/年
+                        </div>
+                    </div>
+                    <div class="row mb-2">
+                        <div class="col-6 ps-4">液化石油ガス（LPG）</div>
+                        <div class="col-6">
+                            <input id="ekikaSekiyuGass" class="customInput" value="0" type="number" min="0">
+                            Kg/年
+                        </div>
+                    </div>
+                    <div class="row mb-2">
+                        <div class="col-6 ps-4">他人から供給された熱</div>
+                        <div class="col-6">
+                            <input id="taninKyoukyu" class="customInput" value="0" type="number" min="0">
+                            MJ/年
+                        </div>
+                    </div>
+                    <div class="customFooter">
+                        <input type="submit" id="heatDemandSaveButton" value="実行" class="esri-button me-1">
+                        <input type="button" id="heatDemandCancelButton" value="キャンセル" class="esri-button esri-button--secondary ms-1">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="sceneDiv" class="d-none">
+        <div id="sceneViewDiv" class="viewDiv"></div>
+        <div id="sceneInfoDiv" class="infoDiv esri-widget">
+            <calcite-shell>
+                <calcite-shell-panel slot="panel-start" width-scale="m">
+                    <calcite-panel heading="ヒートポンプ配置">
+                        <calcite-list>
+                            <calcite-label>
+                                <calcite-list-item open class="esri-editor__panel-content__section pb-0">
+                                    <calcite-action id="pumpSubmitAction" text="配置決定" text-enabled class="text-center">
+                                    </calcite-action>
+                                </calcite-list-item>
+                            </calcite-label>
+                        </calcite-list>
+                    </calcite-panel>
+                </calcite-shell-panel>
+            </calcite-shell>
+        </div>
+    </div>
+
+    <div id="loading" class="d-flex justify-content-center align-items-center d-none">
+        <div class="spinner-border" role="status">
+            <span class="visually-hidden">Loading...</span>
+        </div>
+    </div>
+
+    <calcite-alert id="errorMessage" icon kind="danger" open="false" label="A report alert">
+        <div slot="message">Error occured</div>
+    </calcite-alert>
+
+    <div id="customConfirm"></div>
+
+    <div id="switchDiv">
+        <input class="esri-component esri-widget--button esri-widget esri-interactive"
+               type="button"
+               id="switchBtn"
+               value="3D" />
+    </div>
+
+</div>
