@@ -77,11 +77,11 @@
 ## 7. 本リポジトリのフォルダ構成 <!-- 本GitHub上のソースファイルの構成を記載ください。 -->
 | フォルダ名 |　詳細 |
 |-|-|
-| SewerHeatGIS | ArcGISProで使用するスクリプト |
-| SewerHeatGIS_ProAppModule | ArcGISProのモジュール |
-| SewerHeatGIS_Web | ArcGISOnlineのモジュール |
-
-
+| node | WebのJavaScriptバンドル用 |
+| SewerHeatGIS | ArcGIS Pro処理スクリプト(Pythonスクリプト) |
+| SewerHeatGIS_ProAppModule | ArcGIS Proアドインプログラム |
+| SewerHeatGIS_Web | Webプログラム |
+| SewerHeatGIS.sln | ソリューションファイル(Visual Studio) |
 
 ## 8. ライセンス <!-- 変更せず、そのまま使うこと。 -->
 
