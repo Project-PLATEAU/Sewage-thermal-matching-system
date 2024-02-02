@@ -1,0 +1,246 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+  <head>
+    <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>操作マニュアル </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="操作マニュアル ">
+    
+    
+      <link rel="shortcut icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../styles/docfx.vendor.min.css">
+      <link rel="stylesheet" href="../styles/docfx.css">
+      <link rel="stylesheet" href="../styles/main.css">
+      <meta property="docfx:navrel" content="../toc.html">
+      <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../resources/logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="操作マニュアル">操作マニュアル</h1>
+
+<h1 id="1-本書について">1 本書について</h1>
+<p>本書では、下水熱ポテンシャルマッチングシステム（以下「本システム」という。）の操作手順について記載しています。</p>
+<h1 id="2-使い方">2 使い方</h1>
+<h2 id="2-1-トップ画面">2-1 トップ画面</h2>
+<p>本システムは「ポテンシャルマップ作成ツール」と「下水熱ツール」の２種類で構成されています。ポテンシャルマップ作成ツールは、設定ファイル「SewerHeatGIS.aprx」を起動すると以下の画面が表示されます。</p>
+<p>①	 下水熱設定ツール</p>
+<p>建物用途の変換、熱需要算出処理、最寄り管渠検索を実行します。</p>
+<p>②	 延床面積集計</p>
+<p>管渠を選択することで、選択された管渠の逓加延床面積を集計します。</p>
+<p>③	 ポテンシャル計算</p>
+<p>管渠の熱ポテンシャルを計算します。</p>
+<p><img src="../resources/userMan/01.jpg" alt=""></p>
+<p>下水熱ツールは、URLにてログインすると以下の画面が表示されます。</p>
+<p>①	 拡大・縮小・２Dと３D表示の切り替え</p>
+<p>画面の拡大・縮小及び２Dと３Dの切り替えを行えます。</p>
+<p>②	凡例</p>
+<p>画面上に表示されている図形の凡例を表示します。</p>
+<p>③	下水熱ツール</p>
+<p>下水熱ツールで利用可能な各種機能が表示されます。</p>
+<p><img src="../resources/userMan/02.JPG" alt=""></p>
+<h2 id="2-2-ポテンシャルマップ作成ツール">2-2 ポテンシャルマップ作成ツール</h2>
+<p>ポテンシャルマップ作成ツールの①～③を押下することで、各種処理を実行することができます。</p>
+<h2 id="2-2-1-下水熱設定ツール">2-2-1 下水熱設定ツール</h2>
+<p>①	設定ファイル選択</p>
+<p>・「選択」ボタンを押下するとファイル/フォルダ選択のダイアログが表示され、ダイアログの中で選択したパスがテキストボックスに入力されます。</p>
+<p>②	 建物用途変換ファイル選択</p>
+<p>・「選択」ボタンを押下するとファイル/フォルダ選択のダイアログが表示され、ダイアログの中で選択したパスがテキストボックスに入力されます。</p>
+<p>③	 熱需要算出処理実行</p>
+<p>・①及び②で設定ファイル選択を行ったうえで「熱需要算出処理実行」ボタンを押下すると、各建物に対して熱受領を算出する処理が実行されます。</p>
+<p>④	 最寄り管渠検索処理方法</p>
+<p>・建物に対する最寄り建物の検索方法を「建物からの距離で管渠を検索」「建物からの距離で桝を検索」の２種類から選択できます。</p>
+<p>⑤	 最寄り管渠検索処理実行</p>
+<p>・④で選択した方法で各建物に対する最寄り管渠を検索します。</p>
+<p>⑥	 終了</p>
+<p>・ダイアログを閉じます。</p>
+<p><img src="../resources/userMan/03.JPG" alt=""></p>
+<h2 id="2-2-2-延床面積集計">2-2-2 延床面積集計</h2>
+<p>①	設定ファイル選択</p>
+<p>・「選択」ボタンを押下するとファイル/フォルダ選択のダイアログが表示され、ダイアログの中で選択したパスがテキストボックスに入力されます。</p>
+<p>②	 上流側延べ床面積１</p>
+<p>・延べ床面積を集計する対象管渠の上流側に合流してくる管渠の延べ床面積を入力することで、入力した数値を初期値として延べ床面積の集計を実行できます。（②～⑤までの４種類の合計を初期値に設定できる）</p>
+<p>③	 上流側延べ床面積２</p>
+<p>・延べ床面積を集計する対象管渠の上流側に合流してくる管渠の延べ床面積を入力することで、入力した数値を初期値として延べ床面積の集計を実行できます。（②～⑤までの４種類の合計を初期値に設定できる）</p>
+<p>④	 上流側延べ床面積３</p>
+<p>・延べ床面積を集計する対象管渠の上流側に合流してくる管渠の延べ床面積を入力することで、入力した数値を初期値として延べ床面積の集計を実行できます。（②～⑤までの４種類の合計を初期値に設定できる）</p>
+<p>⑤	 上流側延べ床面積４</p>
+<p>・延べ床面積を集計する対象管渠の上流側に合流してくる管渠の延べ床面積を入力することで、入力した数値を初期値として延べ床面積の集計を実行できます。（②～⑤までの４種類の合計を初期値に設定できる）</p>
+<p>⑥	 上流延床面積値初期化</p>
+<p>・②～⑤に入力されている値を初期化（０に戻す）します。</p>
+<p>⑦	管渠選択</p>
+<p>・②～⑤に入力されている値の合計を初期値として、選択した管渠から下流の管渠追跡を行い、延床面積を集計します。（管渠が分岐するか合流するまで追跡を実施し、延床面積を集計します）</p>
+<p>⑧	終了</p>
+<p>・ダイアログを閉じます。</p>
+<p><img src="../resources/userMan/04.JPG" alt=""></p>
+<h2 id="2-2-3-ポテンシャル計算">2-2-3 ポテンシャル計算</h2>
+<p>①	設定ファイル選択</p>
+<p>・「選択」ボタンを押下するとファイル/フォルダ選択のダイアログが表示され、ダイアログの中で選択したパスがテキストボックスに入力されます。</p>
+<p>②	 ポテンシャル計算実行</p>
+<p>・各管渠に対する熱ポテンシャル値を計算します。</p>
+<p>③	終了</p>
+<p>・ダイアログを閉じます。</p>
+<p><img src="../resources/userMan/05.JPG" alt=""></p>
+<h2 id="2-3-下水熱ツール">2-3 下水熱ツール</h2>
+<p>下水熱ツールの②～⑯を押下することで、各種処理を実行することができます。</p>
+<p>①	 処理の流れ</p>
+<p>・下水熱ツールで実施できる処理の流れを示しています。</p>
+<p>②	 地区絞込み（処理区）</p>
+<p>・ここで選択した処理区内の建物、管渠、人孔だけが表示されます。</p>
+<p>③	 検索対象選択</p>
+<p>・下水熱を検討する対象を「空調」「給湯」から選択します。</p>
+<p>④	 検索バッファー指定</p>
+<p>・熱需給マッチングのうち、家屋から選択される管渠の最大バッファー値を指定できます。（最大値は150mまで）</p>
+<p>⑤	 熱需給マッチング（家屋（1件）→管渠選択）</p>
+<p>・ボタンを押下し、画面上で家屋を１件選択すると、家屋の熱需要値より高い熱ポテンシャル値を持ち、且つ家屋から④で指定した距離内にある管渠が強調表示されます。</p>
+<p>⑥	 熱需給マッチング（管渠（複数可）→家屋選択）</p>
+<p>・ボタンを押下し、画面上で管渠（複数可）を選択すると、管渠の熱ポテンシャル値より低い熱需要値を持つ家屋が強調表示されます。</p>
+<p>⑦	 検索バッファー指定</p>
+<p>・熱需給マッチングのうち、人孔から選択される家屋の最大バッファー値を指定できます。（最大値は150mまで）</p>
+<p>⑧	熱需給マッチング（人孔（１件）→家屋選択→管渠（複数可）絞込）</p>
+<p>・ボタンを押下し、画面上で人孔を１件選択し絞込用管渠をすることで、人孔の熱ポテンシャル値より低い熱需要値を持ち、且つ人孔から⑦で指定した距離内にあり、選択した管渠に関連付いている家屋が強調表示されます。</p>
+<p>⑨	熱需要値変更</p>
+<p>・ボタンを押下し、画面上で家屋を１件選択すると、⑰が表示されここで年間のエネルギー量を入力することで正確な熱需要値が家屋の熱需要値に入力される。</p>
+<p>⑩	関連管渠変更</p>
+<p>・ボタンを押下し、画面上で家屋→管渠の順で選択することで家屋に関連付く管渠が変更される。</p>
+<p>⑪	家屋→管渠（シミュレーション対象）選択</p>
+<p>・ボタンを押下し、画面上で家屋→管渠の順で選択することでシミュレーション対象を指定する。このボタンで対象を選択するまで、⑫～⑯はグレーアウトしている。</p>
+<p>⑫	ヒートポンプ配置</p>
+<p>・ボタンを押下すると、画面が３Dに切り替わり選択された家屋の熱需要値と管渠の熱ポテンシャル値で必要となるヒートポンプの大きさと同等の立体が表示される。画面上でヒートポンプを移動・回転させ設置する場所を確定後、画面右上に表示される「配置決定」を押下することでヒートポンプの設置場所を確定できる。</p>
+<p>⑬	採熱経路作成</p>
+<p>・ヒートポンプから採熱対象となる人孔までの経路を画面上で入力し、採熱経路を確定させる。</p>
+<p>⑭	検討ツール作成</p>
+<p>・選択した家屋、管渠、作成したヒートポンプ、採熱経路、③で選択した検討対象などより「下水熱利用可能性簡易検討ツール」に数値を入力した結果のExcelを圧縮（ZIP形式）したデータをダウンロードできる。</p>
+<p>⑮	調書作成</p>
+<p>・選択した家屋、管渠の各種情報や検討した位置画像挿入した「下水熱利用調書」をPDF形式でダウンロードできる。</p>
+<p>⑯	初期化</p>
+<p>・選択した家屋、管渠、作成したヒートポンプ、採熱経路の初期化を行います。</p>
+<p>⑰	熱需要換算値入力画面</p>
+<p>・正しい熱需要を入力する際に、各値を入力すると熱需要に換算し家屋の属性に格納できる。</p>
+<p><img src="../resources/userMan/06.JPG" alt=""></p>
+<h1 id="3-出力データ">3 出力データ</h1>
+<p>解析・シミュレーション機能で出力されるデータは以下のとおりです。</p>
+<table>
+<thead>
+<tr>
+<th>機能</th>
+<th>出力データ</th>
+<th>内容</th>
+<th>データ形式</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>検討ツール作成</td>
+<td>下水熱利用可能性簡易検討ツール</td>
+<td>選択した家屋、管渠、作成したヒートポンプ、採熱経路、選択した検討対象などを「下水熱利用可能性簡易検討ツール」に入力したデータ</td>
+<td>Microsoft Excelを圧縮したZIP</td>
+</tr>
+<tr>
+<td>調書作成</td>
+<td>下水熱利用調書</td>
+<td>選択した家屋、管渠の各種情報や検討した位置画像などを用いて作成した調書データ</td>
+<td>PDF</td>
+</tr>
+</tbody>
+</table>
+<h2 id="3-1-下水熱利用可能性簡易検討ツール">3-1 下水熱利用可能性簡易検討ツール</h2>
+<p>本システムでは、検討ツール作成機能から国土交通省　水管理・国土保全局下水道部作成の下水熱利用可能性簡易検討ツールに必要となる値を入力した状態でダウンロードできます。</p>
+<p><img src="../resources/userMan/07.JPG" alt=""></p>
+<h2 id="3-2-下水熱利用調書">3-2 下水熱利用調書</h2>
+<p>選択した家屋の情報、選択した管渠の情報、ヒートポンプのサイズ、採熱経路計画位置図を記載した調書がPDF形式で出力されます。</p>
+<p><img src="../resources/userMan/08.JPG" alt=""></p>
+
+</article>
+          </div>
+
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In this article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+      
+      <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="text/javascript" src="../styles/docfx.vendor.min.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

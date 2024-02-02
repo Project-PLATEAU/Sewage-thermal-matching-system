@@ -1,0 +1,1205 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+  <head>
+    <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>環境構築手順書 </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="環境構築手順書 ">
+    
+    
+      <link rel="shortcut icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../styles/docfx.vendor.min.css">
+      <link rel="stylesheet" href="../styles/docfx.css">
+      <link rel="stylesheet" href="../styles/main.css">
+      <meta property="docfx:navrel" content="../toc.html">
+      <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../resources/logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="環境構築手順書">環境構築手順書</h1>
+
+<h1 id="1-本書について">1 本書について</h1>
+<p>本書では、下水熱ポテンシャルマッチングシステム（以下「本システム」という。）の利用環境構築手順について記載しています。本システムの構成や仕様の詳細については以下も参考にしてください。</p>
+<p><a href="https://xxxx">技術検証レポート</a></p>
+<h1 id="2-動作環境">2 動作環境</h1>
+<p>本システムの動作環境は以下のとおりです。</p>
+<table>
+<thead>
+<tr>
+<th>項目</th>
+<th>最小動作環境</th>
+<th>推奨動作環境</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>OS</td>
+<td>Microsoft Windows 10 または 11</td>
+<td>同左</td>
+</tr>
+<tr>
+<td>CPU</td>
+<td>Intel Core i3以上</td>
+<td>Intel Core i5以上</td>
+</tr>
+<tr>
+<td>メモリ</td>
+<td>8GB以上</td>
+<td>32GB以上</td>
+</tr>
+<tr>
+<td>ディスプレイ解像度</td>
+<td>1024×768以上</td>
+<td>1080ｐ</td>
+</tr>
+<tr>
+<td>ブラウザー</td>
+<td>Google Chrome バージョン 115 以降<br>Microsoft Edge バージョン 115 以降<br>Mozilla Firefox バージョン 117 以降<br>Mozilla Firefox バージョン 115 (ESR)<br>Safari バージョン 16 以降</td>
+<td>同左</td>
+</tr>
+<tr>
+<td>ネットワーク</td>
+<td>ライセンス認証にネットワーク環境が必要<br>背景地図を表示させるために以下のURLを閲覧できる環境が必要<br>・背景の標準地図<br>https://services.arcgisonline.com</td>
+<td>同左</td>
+</tr>
+</tbody>
+</table>
+<h1 id="3-設定手順">3 設定手順</h1>
+<h2 id="3-1-インストール手順">3-1 インストール手順</h2>
+<p>ArcGIS Pro3.1.3のインストールを実施します。</p>
+<p><a href="https://github.com/Project-PLATEAU/Sewage-thermal-matching-system/releases/">こちら</a>
+からアプリケーションをダウンロードします。</p>
+<p>ダウンロード後、zipファイルを右クリックし、「即時解凍」を選択することで、zipファイルを展開します。</p>
+<p>展開されたフォルダ内の「01_ArcGISProツールボックス」「02_ArcGISProアドイン」「03_ArcGISProプロジェクトテンプレート」を適切に配置・実行することで、アプリケーションが起動します。</p>
+<p><img src="../resources/devMan/03.JPG" alt=""></p>
+<p>「モジュール\01_ArcGISProツールボックス\SewerHeatGIS」フォルダを「C:\」に
+配置します。</p>
+<p><img src="../resources/devMan/04.JPG" alt="">
+※配置後、「C:\SewerHeatGIS\ ArcGisPro」となることを確認してください。</p>
+<p>「モジュール\02_ArcGISProアドイン\SewerHeatGIS_ProAppModule\SewerHeatGIS_ProAppModule.esriAddinX」をダブルクリックして、
+Esri ArcGIS アドイン インストール ユーティリティを起動します。</p>
+<p><img src="../resources/devMan/05.JPG" alt=""></p>
+<p>「アドインのインストール」ボタンをクリックします。</p>
+<p><img src="../resources/devMan/06.JPG" alt=""></p>
+<p>インストールが完了すると通知が表示されます。</p>
+<p><img src="../resources/devMan/07.JPG" alt=""></p>
+<p>「モジュール\03_ArcGISProプロジェクト\ArcGisPro」を任意のフォルダに配置してください。</p>
+<p><img src="../resources/devMan/08.JPG" alt=""></p>
+<h2 id="3-2-webの構築">3-2 Webの構築</h2>
+<p>ArcGIS OnlineおよびAzure App Serviceの契約が必要となります。</p>
+<p>Azure Portalにアクセスし、「サインイン」からログインする。</p>
+<p>[URL] <a href="https://azure.microsoft.com/ja-jp/get-started/azure-portal">https://azure.microsoft.com/ja-jp/get-started/azure-portal</a></p>
+<p>「リソースの作成」をクリックする。</p>
+<p><img src="../resources/devMan/09.JPG" alt=""></p>
+<p>Webアプリの「作成」をクリックする。</p>
+<p><img src="../resources/devMan/10.JPG" alt=""></p>
+<p>「基本」画面で下記を参考に各情報を入力し、Windowsプランを「新規作成」する。</p>
+<p>サブスクリプション      ：デフォルト</p>
+<p>リソースグループ        ：{任意}</p>
+<p>(リソースグループがなければ新規作成してください)</p>
+<p>名前                    ：{任意}※</p>
+<p>https://{名前}.azurewebsites.netがWebのURLになります。</p>
+<p>公開                    ：コード</p>
+<p>ランタイム スタック     ：.NET 6(LTS)</p>
+<p>オペレーティングシステム：Windows</p>
+<p>地域                    ：Japan West (またはJapan East)</p>
+<p><img src="../resources/devMan/11.JPG" alt="">
+※「新しいApp Serviceプラン」の名前は任意です。</p>
+<p>価格プラン(Standard S1)を選択し、「次：データベース&gt;」をクリックする。</p>
+<p><img src="../resources/devMan/12.JPG" alt=""></p>
+<p>データベースの作成はデフォルト(チェック無し)で、「次：デプロイ&gt;」をクリックする。</p>
+<p><img src="../resources/devMan/13.JPG" alt=""></p>
+<p>全てデフォルトで「次：ネットワーク&gt;」をクリックする。</p>
+<p><img src="../resources/devMan/13-2.png" alt=""></p>
+<p>全てデフォルトで「次：監視&gt;」をクリックする。</p>
+<p><img src="../resources/devMan/14.JPG" alt=""></p>
+<p>Application Insightsを有効にする「いいえ」を選択し、「次：タグ&gt;」をクリックする。</p>
+<p><img src="../resources/devMan/15.JPG" alt=""></p>
+<p>デフォルトで「次：確認および作成&gt;」をクリックする。</p>
+<p><img src="../resources/devMan/15-2.png" alt=""></p>
+<p>内容を確認の上、「作成」ボタンをクリックする。</p>
+<p><img src="../resources/devMan/16.JPG" alt=""></p>
+<p>「デプロイが進行中です」のメッセージが「デプロイが完了しました」に変更となった
+ことを確認し、「リソースに移動」をクリックする。</p>
+<p><img src="../resources/devMan/17.JPG" alt=""></p>
+<p>左メニュー「デプロイセンター」をクリックする。</p>
+<p><img src="../resources/devMan/18.JPG" alt=""></p>
+<p>FTPS資格情報タブをクリックし、以下の情報を確認する。</p>
+<p>FTPSエンドポイント：{自動生成}</p>
+<p>FTPSユーザー名：{自動生成}</p>
+<p>パスワード：{自動生成}</p>
+<p><img src="../resources/devMan/19.JPG" alt=""></p>
+<h2 id="3-3-arcgis-onlineの初期設定">3-3 ArcGIS Onlineの初期設定</h2>
+<p>・ArcGIS Onlineにアクセスし、「サインイン」からログインする。</p>
+<p>[URL] <a href="https://www.arcgis.com/index.html">https://www.arcgis.com/index.html</a></p>
+<p>ログイン後、画面上部の「コンテンツ」タブをクリックする。</p>
+<p><img src="../resources/devMan/20.JPG" alt=""></p>
+<p>「新しいアイテム」をクリックする。</p>
+<p><img src="../resources/devMan/21.JPG" alt=""></p>
+<p>「アプリケーション」をクリックする。</p>
+<p><img src="../resources/devMan/22.JPG" alt=""></p>
+<p>「Webマッピング」を選択し、URLにAzure App ServiceのURL(https://{名前}.azurewebsites.net)を入力して、「次へ」をクリックする。</p>
+<p><img src="../resources/devMan/23.JPG" alt=""></p>
+<p>各情報を入力し、「保存」をクリックする。</p>
+<p>タイトル：{任意}	(例) 下水熱UC</p>
+<p>フォルダ：{任意}	(例) SewerHeatGIS</p>
+<p>タグ    ：{任意}	(例) production</p>
+<p>サマリー：{任意}	(例) 下水熱UC公開用のアプリケーションキー</p>
+<p><img src="../resources/devMan/24.JPG" alt=""></p>
+<p>アプリケーションキーの作成後、右上の「設定」ボタンをクリックする。</p>
+<p><img src="../resources/devMan/25.JPG" alt=""></p>
+<p>「信頼できるとしてマーク」をクリックする。</p>
+<p>※クリックすると自動で「削除の防止」がチェックされます。</p>
+<p><img src="../resources/devMan/26.JPG" alt=""></p>
+<p>画面下部の「目的」を「使用可能」に選択し、「アプリケーションの登録」をクリックする。</p>
+<p><img src="../resources/devMan/27.JPG" alt=""></p>
+<p>リダイレクトURL、URLには同様にAzure App ServiceのURL(https://{名前}.azurewebsites.net)を入力し、アプリケーション環境は「ブラウザー」を指定して、「登録」をクリックする。</p>
+<p><img src="../resources/devMan/28.JPG" alt=""></p>
+<p>以上の設定が完了すると以下の情報が発行されるので、手順4.2で利用する。</p>
+<p>クライアントID：{自動生成}</p>
+<p>クライアントシークレット：{自動生成}</p>
+<p><img src="../resources/devMan/29.JPG" alt=""></p>
+<h2 id="3-4-arcgis-onlineのアプリケーションキーを設定ファイルに反映">3-4 ArcGIS Onlineのアプリケーションキーを設定ファイルに反映</h2>
+<p>Webの設定ファイル「モジュール\04_Web\appsettings.Prod.json」をエディタで開く。</p>
+<p><img src="../resources/devMan/30.JPG" alt=""></p>
+<p>appsettings.Prod.json の&quot;appId&quot;:に{クライアントID }を記載して保存する。</p>
+<p><img src="../resources/devMan/31.JPG" alt=""></p>
+<h2 id="3-5-azure-app-serviceへのモジュールアップロード">3-5 Azure App Serviceへのモジュールアップロード</h2>
+<p>WinSCP 等のFTPクライアントツールを用意する。</p>
+<p>WinSCPを起動して初期表示される設定画面で下記の項目を入力し、「設定」をクリック
+する。</p>
+<p>転送プロトコル：FTP</p>
+<p>暗号化        ：明示的な TLS/SSL 暗号化</p>
+<p>ホスト名      ：{ FTPSエンドポイント}</p>
+<p>ポート番号    ：21</p>
+<p>ユーザー名      ：{ FTPSユーザー名}</p>
+<p><img src="../resources/devMan/32.JPG" alt=""></p>
+<p>任意の「セッションの保存名」を入力して、「OK」をクリックする。</p>
+<p><img src="../resources/devMan/33.JPG" alt=""></p>
+<p>作成したセッション(下水熱UC公開サイト)を選択して、「ログイン」をクリックする。</p>
+<p><img src="../resources/devMan/34.JPG" alt=""></p>
+<p>パスワードを入力し、「OK」をクリックする。</p>
+<p><img src="../resources/devMan/35.JPG" alt=""></p>
+<p>ログイン完了後、左ペインのパスをダブルクリックする。</p>
+<p><img src="../resources/devMan/36.JPG" alt=""></p>
+<p>「参照」をクリックして、Web公開モジュールのフォルダを指定し、「開く」をクリックする。</p>
+<p><img src="../resources/devMan/37.JPG" alt=""></p>
+<p>※「モジュール\04_Web」を開く。</p>
+<p>転送設定を「バイナリ」に指定し、左ペインの全フォルダ・全ファイルを全選択して、右ペインにドラッグ&amp;ドロップする。</p>
+<p><img src="../resources/devMan/38.JPG" alt=""></p>
+<h1 id="4-ビルド手順">4 ビルド手順</h1>
+<p>自身でソースファイルをダウンロードしビルドを行うことで、実行ファイルを生成することができます。</p>
+<p>ソースファイルは
+<a href="https://github.com/Project-PLATEAU/UC22-013-SolarPotential/">こちら</a>
+からダウンロード可能です。</p>
+<p>GitHubからダウンロードしたソースファイルの構成は以下のようになっています。</p>
+<p><img src="../resources/devMan/%E3%83%93%E3%83%AB%E3%83%891.png" alt=""></p>
+<p>（1）本システムのソリューションファイル（SewerHeatGIS.sln）をVisualStudio2017以降のバージョンで開きます。</p>
+<p>（2）SewerHeatGIS.slnをVisualStudio2017以降で開くと、ソリューション' SewerHeatGIS 'に3つのプロジェクトが表示されます。
+以下の赤枠部分のように、ソリューション構成を【Release】に、ソリューションプラットフォームを【Any CPU】に設定します。</p>
+<p><img src="../resources/devMan/%E3%83%93%E3%83%AB%E3%83%892.png" alt=""></p>
+<p>（3）以下の赤枠部分のように、[ソリューションのビルド]を選択し、ソリューション全体をビルドします。</p>
+<p><img src="../resources/devMan/%E3%83%93%E3%83%AB%E3%83%893.png" alt=""></p>
+<p>（4）ビルドが正常に終了すると、ソリューションファイルと同じフォルダにあるbin\Releaseフォルダに実行ファイルが生成されます。</p>
+<p>※ダウンロードしたソリューションをビルドする際に、ビルドエラーとなり、次のメッセージが出力されるケースがあります。</p>
+<p>「（ファイル名）を処理できませんでした。インターネットまたは制限付きゾーン内にあるか、ファイルに Web のマークがあるためです。これらのファイルを処理するには、Web のマークを削除してください。」</p>
+<p>この場合は該当するファイルのプロパティを開き、全般タブ内の「セキュリティ」の項目について[許可する]にチェックを入れてください。</p>
+<p><img src="../resources/devMan/%E3%83%93%E3%83%AB%E3%83%894.png" alt=""></p>
+<p>【参考】
+ソースファイルの構成と機能は以下のようになっています。コードを修正する際の参考としてください。</p>
+<p>・システムのディレクトリ構成(ArcGIS Pro)</p>
+<p><img src="../resources/devMan/%E3%83%93%E3%83%AB%E3%83%895.png" alt=""></p>
+<p>・システムのディレクトリ構成(Web)</p>
+<p><img src="../resources/devMan/%E3%83%93%E3%83%AB%E3%83%896.png" alt=""></p>
+<h1 id="5-準備物一覧">5 準備物一覧</h1>
+<p>アプリケーションを利用するために以下のデータを入手します。</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>データ種別</th>
+<th>機能</th>
+<th>用途</th>
+<th>入力方法</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>①</td>
+<td>3D都市モデル(CityGML)G空間情報センターから取得します。<br> <a href="https://front.geospatial.jp/">https://front.geospatial.jp/</a></td>
+<td>全般</td>
+<td>全般</td>
+<td>格納フォルダパス指定</td>
+</tr>
+<tr>
+<td>②</td>
+<td>下水道データ（SewerPipe及びManhole）</td>
+<td>全般</td>
+<td>全般</td>
+<td>格納フォルダパス指定</td>
+</tr>
+</tbody>
+</table>
+<p>本システムでは、3D都市モデルの建築物モデルの形状（LOD0、LOD1）と属性を活用します。</p>
+<table>
+<thead>
+<tr>
+<th>地物</th>
+<th>地物型</th>
+<th>属性区分</th>
+<th>属性名</th>
+<th>内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>建築物</td>
+<td>bldg:lod1Solid</td>
+<td>空間属性</td>
+<td>bldg:lod1Solid</td>
+<td>建築物のLOD1の立体</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>主題属性</td>
+<td>uro_buildingDetails_totalFloorArea</td>
+<td>延床面積：m2</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td>bldg_storeysAboveGround</td>
+<td>地上階数</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td>bldg_storeysBelowGround</td>
+<td>地下階数</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td>bldg_measuredHeight</td>
+<td>計測高さ：m</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td>bldg_usage</td>
+<td>建物用途</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td>bldg:lod0FootPrint</td>
+<td>FootPrint1</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td>uro_buildingDetails_buildingFootprintArea</td>
+<td>FootPrint2</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td>Shape_Area</td>
+<td>ShapeArea</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td>FootPrint</td>
+<td>図形面積：m2</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td>gen_建物ID</td>
+<td>gen_建物ID</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td>HeatDemand1</td>
+<td>熱需要値(冷房)：MJ/年</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td>HeatDemand2</td>
+<td>熱需要値(暖房)：MJ/年</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td>HeatDemand3</td>
+<td>熱需要値(空調)：MJ/年</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td>HeatDemand4</td>
+<td>熱需要値(給湯)：MJ/年</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td>KankyoKey</td>
+<td>管渠キー</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td>NewYouto</td>
+<td>統合した建物用途</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td>Nobeyuka</td>
+<td>延床面積格納：m2</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td>tmpKankyoKey</td>
+<td>関連管渠キー（修正）</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td>ReHeatDem3</td>
+<td>正確な熱需要格納（空調）：MJ/年</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td>ReHeatDem4</td>
+<td>正確な熱需要格納（給湯）：MJ/年</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td>TR_AREA</td>
+<td>処理区</td>
+</tr>
+<tr>
+<td>管渠</td>
+<td>uro:SewerPipe</td>
+<td>空間属性</td>
+<td>frn:lod2Geometry</td>
+<td>管渠図形</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>主題属性</td>
+<td>gml:description</td>
+<td>説明</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td>core:creationDate</td>
+<td>データ作成日</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td>frn:function</td>
+<td>機能</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td>uro:cityFurnitureDataQualityAttribute</td>
+<td>データ品質属性</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td>uro:geometrySrcDesc</td>
+<td>幾何属性作成方法</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td>uro:frnFacilityIdAttribute.uro:FacilityIdAttribute</td>
+<td>施設識別属性</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td>uro:id</td>
+<td>識別子</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td>uro:prefecture</td>
+<td>都道府県</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td>uro:city</td>
+<td>市区町村</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td>uro:alternativeName</td>
+<td>その他の名称</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td>uro:dmCode</td>
+<td>DMコード</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td>uro:geometryType</td>
+<td>レコードタイプ</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td>uro:mapLevel</td>
+<td>地図情報レベル</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td>uro:shapeType</td>
+<td>図形区分</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td>uro:lod0Geometry</td>
+<td>図式情報</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td>uro:occupierType</td>
+<td>事業者区分</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td>uro:year</td>
+<td>埋設年度</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td>uro:yearType</td>
+<td>確からしさ</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td>uro:administrator</td>
+<td>主管事業者</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td>uro:startNode</td>
+<td>開始ノード</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td>uro:endNode</td>
+<td>終了ノード</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td>uro:depth</td>
+<td>深さ</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td>uro:minDepth</td>
+<td>最小深さ</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td>uro:maxDepth</td>
+<td>最大深さ</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td>uro:material</td>
+<td>管渠材質の種類</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td>uro:lengthAttribute</td>
+<td>長さ</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td>uro:length</td>
+<td>延長</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td>uro:innerDiamiter</td>
+<td>内径</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td>uro:outerDiamiter</td>
+<td>外径</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td>SEQNO</td>
+<td>ユニークキー</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td>U_MNSEQ</td>
+<td>上流人孔キー</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td>L_MNSEQ</td>
+<td>下流人孔キー</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td>MATERIAL</td>
+<td>管種</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td>SEC_DIST</td>
+<td>区間距離：m</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td>DIAMETER</td>
+<td>口径：mm</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td>DIAMETER_W</td>
+<td>口径（幅）：mm</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td>DIAMETER_H</td>
+<td>口径（高）：mm</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td>THICKNESS</td>
+<td>管厚：mm</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td>GAIKEI_W</td>
+<td>外径（幅）：mm</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td>GAIKEI_H</td>
+<td>外径（高）：mm</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td>U_BTM_HI</td>
+<td>上流管底高：m</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td>L_BTM_HI</td>
+<td>下流管底高：m</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td>U_CNT_HI</td>
+<td>上流管心高：m</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td>L_CNT_HI</td>
+<td>下流管心高：m</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td>A_COVERING</td>
+<td>平均土被り：m</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td>U_COVERING</td>
+<td>上流土被り：m</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td>L_COVERING</td>
+<td>下流土被り：m</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td>CONST_YEAR</td>
+<td>施工年度</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td>TR_AREA</td>
+<td>処理区</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td>TeikaYuka</td>
+<td>逓加延床面積：m2</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td>NobeyukaSum</td>
+<td>接続延床面積：m2</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td>SewerFlow_S</td>
+<td>推定下水流量（夏）：m3/日</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td>SewerFlow_W</td>
+<td>推定下水流量（冬）：m3/日</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td>SewerFlow_Y</td>
+<td>推定下水流量（年間）：m3/日</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td>Potential_S</td>
+<td>ポテンシャル値（夏）：MJ/日</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td>Potential_W</td>
+<td>ポテンシャル値（冬）：MJ/日</td>
+</tr>
+<tr>
+<td>マンホール</td>
+<td>uro:Manhole</td>
+<td>空間属性</td>
+<td>frn:lod2Geometry</td>
+<td>マンホール図形</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>主題属性</td>
+<td>gml:description</td>
+<td>説明</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td>core:creationDate</td>
+<td>データ作成日</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td>gen:measureAttribute</td>
+<td>汎用属性（単位付き計測値）</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td>gen:genericAttributeSet</td>
+<td>汎用属性セット</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td>frn:function</td>
+<td>機能</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td>uro:cityFurnitureDataQualityAttribute</td>
+<td>データ品質属性</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td>uro:geometrySrcDesc</td>
+<td>幾何属性作成方法</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td>uro:frnFacilityIdAttribute.uro:FacilityIdAttribute</td>
+<td>施設識別属性</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td>uro:id</td>
+<td>識別子</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td>uro:prefecture</td>
+<td>都道府県</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td>uro:city</td>
+<td>都道府県</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td>uro:alternativeName</td>
+<td>その他の名称</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td>uro:frnDmAttribute.DmGeometricAttribute</td>
+<td>図式情報</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td>uro:dmCode</td>
+<td>DMコード</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td>uro:geometryType</td>
+<td>レコードタイプ</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td>uro:mapLevel</td>
+<td>地図情報レベル</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td>uro:shapeType</td>
+<td>図形区分</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td>uro:lod0Geometry</td>
+<td>図式情報</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td>uro:occupierType</td>
+<td>事業者区分</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td>uro:year</td>
+<td>埋設年度</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td>uro:yearType</td>
+<td>確からしさ</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td>uro:administrator</td>
+<td>主管事業者</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td>uro:containerType</td>
+<td>構造物の種類</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td>uro:innerDiamiterLong</td>
+<td>長辺の内径</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td>uro:outerDiamiterLong</td>
+<td>長辺の外径</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td>uro:innerDiamiterShort</td>
+<td>短辺の内径</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td>uro:outerDiamiterShort</td>
+<td>短辺の外径</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td>uro:depth</td>
+<td>深さ</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td>ANGLE</td>
+<td>角度</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td>SEQNO</td>
+<td>ユニークキー</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td>FCLASS</td>
+<td>分類</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td>I_DIAMETER</td>
+<td>内径：mm</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td>DIAMETER_L</td>
+<td>長辺内径：mm</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td>GAIKEI_L</td>
+<td>長辺外径：mm</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td>DIAMETER_S</td>
+<td>短辺内径：mm</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td>GAIKEI_S</td>
+<td>短辺外径：mm</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td>GROUND_HI</td>
+<td>地盤高：m</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td>DEPTH</td>
+<td>深さ：m</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td>TR_AREA</td>
+<td>処理区</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td>Potential_S</td>
+<td>ポテンシャル値（夏）：MJ/日</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td>Potential_W</td>
+<td>ポテンシャル値（冬）：MJ/日</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td>Potential_Y</td>
+<td>ポテンシャル値（年間）：MJ/年</td>
+</tr>
+</tbody>
+</table>
+
+</article>
+          </div>
+
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In this article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+      
+      <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="text/javascript" src="../styles/docfx.vendor.min.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>
