@@ -1,0 +1,635 @@
+{
+  "source_base_path": "D:/下水熱markdown作業/markdown",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "Resource",
+      "output": {
+        "resource": {
+          "relative_path": "index.json"
+        }
+      }
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "index.md",
+      "output": {
+        ".html": {
+          "relative_path": "index.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "manual/devMan.md",
+      "output": {
+        ".html": {
+          "relative_path": "manual/devMan.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "manual/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "manual/toc.html"
+        },
+        ".json": {
+          "relative_path": "manual/toc.json"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "manual/userMan.md",
+      "output": {
+        ".html": {
+          "relative_path": "manual/userMan.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "resources/devMan/03.JPG",
+      "output": {
+        "resource": {
+          "relative_path": "resources/devMan/03.JPG"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "resources/devMan/04.JPG",
+      "output": {
+        "resource": {
+          "relative_path": "resources/devMan/04.JPG"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "resources/devMan/05.JPG",
+      "output": {
+        "resource": {
+          "relative_path": "resources/devMan/05.JPG"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "resources/devMan/06.JPG",
+      "output": {
+        "resource": {
+          "relative_path": "resources/devMan/06.JPG"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "resources/devMan/07.JPG",
+      "output": {
+        "resource": {
+          "relative_path": "resources/devMan/07.JPG"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "resources/devMan/08.JPG",
+      "output": {
+        "resource": {
+          "relative_path": "resources/devMan/08.JPG"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "resources/devMan/09.JPG",
+      "output": {
+        "resource": {
+          "relative_path": "resources/devMan/09.JPG"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "resources/devMan/10.JPG",
+      "output": {
+        "resource": {
+          "relative_path": "resources/devMan/10.JPG"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "resources/devMan/11.JPG",
+      "output": {
+        "resource": {
+          "relative_path": "resources/devMan/11.JPG"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "resources/devMan/12.JPG",
+      "output": {
+        "resource": {
+          "relative_path": "resources/devMan/12.JPG"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "resources/devMan/13-2.png",
+      "output": {
+        "resource": {
+          "relative_path": "resources/devMan/13-2.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "resources/devMan/13.JPG",
+      "output": {
+        "resource": {
+          "relative_path": "resources/devMan/13.JPG"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "resources/devMan/14.JPG",
+      "output": {
+        "resource": {
+          "relative_path": "resources/devMan/14.JPG"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "resources/devMan/15-2.png",
+      "output": {
+        "resource": {
+          "relative_path": "resources/devMan/15-2.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "resources/devMan/15.JPG",
+      "output": {
+        "resource": {
+          "relative_path": "resources/devMan/15.JPG"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "resources/devMan/16.JPG",
+      "output": {
+        "resource": {
+          "relative_path": "resources/devMan/16.JPG"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "resources/devMan/17.JPG",
+      "output": {
+        "resource": {
+          "relative_path": "resources/devMan/17.JPG"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "resources/devMan/18.JPG",
+      "output": {
+        "resource": {
+          "relative_path": "resources/devMan/18.JPG"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "resources/devMan/19.JPG",
+      "output": {
+        "resource": {
+          "relative_path": "resources/devMan/19.JPG"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "resources/devMan/20.JPG",
+      "output": {
+        "resource": {
+          "relative_path": "resources/devMan/20.JPG"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "resources/devMan/21.JPG",
+      "output": {
+        "resource": {
+          "relative_path": "resources/devMan/21.JPG"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "resources/devMan/22.JPG",
+      "output": {
+        "resource": {
+          "relative_path": "resources/devMan/22.JPG"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "resources/devMan/23.JPG",
+      "output": {
+        "resource": {
+          "relative_path": "resources/devMan/23.JPG"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "resources/devMan/24.JPG",
+      "output": {
+        "resource": {
+          "relative_path": "resources/devMan/24.JPG"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "resources/devMan/25.JPG",
+      "output": {
+        "resource": {
+          "relative_path": "resources/devMan/25.JPG"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "resources/devMan/26.JPG",
+      "output": {
+        "resource": {
+          "relative_path": "resources/devMan/26.JPG"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "resources/devMan/27.JPG",
+      "output": {
+        "resource": {
+          "relative_path": "resources/devMan/27.JPG"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "resources/devMan/28.JPG",
+      "output": {
+        "resource": {
+          "relative_path": "resources/devMan/28.JPG"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "resources/devMan/29.JPG",
+      "output": {
+        "resource": {
+          "relative_path": "resources/devMan/29.JPG"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "resources/devMan/30.JPG",
+      "output": {
+        "resource": {
+          "relative_path": "resources/devMan/30.JPG"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "resources/devMan/31.JPG",
+      "output": {
+        "resource": {
+          "relative_path": "resources/devMan/31.JPG"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "resources/devMan/32.JPG",
+      "output": {
+        "resource": {
+          "relative_path": "resources/devMan/32.JPG"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "resources/devMan/33.JPG",
+      "output": {
+        "resource": {
+          "relative_path": "resources/devMan/33.JPG"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "resources/devMan/34.JPG",
+      "output": {
+        "resource": {
+          "relative_path": "resources/devMan/34.JPG"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "resources/devMan/35.JPG",
+      "output": {
+        "resource": {
+          "relative_path": "resources/devMan/35.JPG"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "resources/devMan/36.JPG",
+      "output": {
+        "resource": {
+          "relative_path": "resources/devMan/36.JPG"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "resources/devMan/37.JPG",
+      "output": {
+        "resource": {
+          "relative_path": "resources/devMan/37.JPG"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "resources/devMan/38.JPG",
+      "output": {
+        "resource": {
+          "relative_path": "resources/devMan/38.JPG"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "resources/devMan/ビルド1.png",
+      "output": {
+        "resource": {
+          "relative_path": "resources/devMan/ビルド1.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "resources/devMan/ビルド2.png",
+      "output": {
+        "resource": {
+          "relative_path": "resources/devMan/ビルド2.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "resources/devMan/ビルド3.png",
+      "output": {
+        "resource": {
+          "relative_path": "resources/devMan/ビルド3.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "resources/devMan/ビルド4.png",
+      "output": {
+        "resource": {
+          "relative_path": "resources/devMan/ビルド4.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "resources/devMan/ビルド5.png",
+      "output": {
+        "resource": {
+          "relative_path": "resources/devMan/ビルド5.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "resources/devMan/ビルド6.png",
+      "output": {
+        "resource": {
+          "relative_path": "resources/devMan/ビルド6.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "resources/index1.png",
+      "output": {
+        "resource": {
+          "relative_path": "resources/index1.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "resources/index2.png",
+      "output": {
+        "resource": {
+          "relative_path": "resources/index2.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "resources/logo.svg",
+      "output": {
+        "resource": {
+          "relative_path": "resources/logo.svg"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "resources/userMan/01.jpg",
+      "output": {
+        "resource": {
+          "relative_path": "resources/userMan/01.jpg"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "resources/userMan/02.JPG",
+      "output": {
+        "resource": {
+          "relative_path": "resources/userMan/02.JPG"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "resources/userMan/03.JPG",
+      "output": {
+        "resource": {
+          "relative_path": "resources/userMan/03.JPG"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "resources/userMan/04.JPG",
+      "output": {
+        "resource": {
+          "relative_path": "resources/userMan/04.JPG"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "resources/userMan/05.JPG",
+      "output": {
+        "resource": {
+          "relative_path": "resources/userMan/05.JPG"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "resources/userMan/06.JPG",
+      "output": {
+        "resource": {
+          "relative_path": "resources/userMan/06.JPG"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "resources/userMan/07.JPG",
+      "output": {
+        "resource": {
+          "relative_path": "resources/userMan/07.JPG"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "resources/userMan/08.JPG",
+      "output": {
+        "resource": {
+          "relative_path": "resources/userMan/08.JPG"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "resources/userMan/操作説明用.pptx",
+      "output": {
+        "resource": {
+          "relative_path": "resources/userMan/操作説明用.pptx"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "toc.html"
+        },
+        ".json": {
+          "relative_path": "toc.json"
+        }
+      },
+      "version": ""
+    }
+  ],
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}
