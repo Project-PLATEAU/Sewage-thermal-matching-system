@@ -63,6 +63,7 @@
 |       | [EPPlus](https://epplussoftware.com/ja) | 6.2.4 | サーバ上でExcelを編集するソフトウェア |
 |       | [ArcGIS Maps SDK for JavaScript](https://www.esrij.com/products/arcgis-maps-sdk-for-javascript/) | 4.28 | WebサイトにGIS（地図）機能を組み込むためのAPI |
 |       | [iTextSharp.LGPLv.Core](https://www.nuget.org/packages/iTextSharp.LGPLv2.Core) | 3.4.12 | PDFを生成するライブラリ |
+|       | [node.js](https://nodejs.org/en) | 20.11.0 | JavaScript実行環境 |
 
 ## 6. 動作環境（計算処理用PC） <!-- 動作環境についての仕様を記載ください。 -->
 | 項目               | 最小動作環境                                                                                                                                                                                                                                                                                                                                    | 推奨動作環境                   | 
@@ -77,10 +78,8 @@
 ## 7. 本リポジトリのフォルダ構成 <!-- 本GitHub上のソースファイルの構成を記載ください。 -->
 | フォルダ名 |　詳細 |
 |-|-|
-| node | WebのJavaScriptバンドル用 |
 | SewerHeatGIS | ArcGIS Pro処理スクリプト(Pythonスクリプト) |
-| SewerHeatGIS_ProAppModule | ArcGIS Proアドインプログラム |
-| SewerHeatGIS_Web | Webプログラム |
+| SewerHeatGIS_ProAppModule |ラム |
 | SewerHeatGIS.sln | ソリューションファイル(Visual Studio) |
 
 ## 8. ライセンス <!-- 変更せず、そのまま使うこと。 -->
